@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Calculator</title>
+    <script>
+    function tinhtoan() {
+        // Nhận giá trị chiều dài và chiều rộng
+        const dai = document.getElementById("dai").value;
+        const rong = document.getElementById("rong").value;
+
+        // Kiểm tra chiều dài và chiều rộng đã nhập có phải là số không
+        if (isNaN(dai) || isNaN(rong)) {
+        alert("Hãy nhập đúng chiều dài và chiều rộng hợp lệ.");
+        return;
+        }
+        // Tính chu vi và diện tích hình chữ nhật
+        const chuvi = 2 * (parseFloat(dai) + parseFloat(rong));
+        const dientich = parseFloat(dai) * parseFloat(rong);
+
+        // Hiển thị kết quả
+        const result = chuvi: ${chuvi.toFixed(2)} cm<br>dientich: ${dientich.toFixed(2)} cm²;
+        document.getElementById("result").innerHTML = result;
+        document.write
+}
+    </script>
+</head>
+<body>
+    <h1>Tính chu vi và diện tích hình chữ nhật</h1>
+    <div class="container">
+        <label for="dai">Chiều dài (cm):</label>
+        <input type="number" id="dai" placeholder="Nhập chiều dài">
+        <br>
+        <label for="rong">Chiều rộng (cm):</label>
+        <input type="number" id="rong" placeholder="Nhập chiều rộng">
+        <br>
+        <button onclick="Tinhtoan()">Tính toán</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
